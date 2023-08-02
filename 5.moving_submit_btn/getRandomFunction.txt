@@ -1,0 +1,96 @@
+// getRandomNumber V1
+//
+//
+//
+//
+// const numberForTest = document.getElementById('number-test');
+// const min = -180;
+// const max = 180;
+
+// let lastNumber = 0;
+// let newNumber = 0;
+
+// const getRandomNumber = () => {
+//   const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+
+//   if (lastNumber < newNumber - 50 || lastNumber > newNumber + 50) {
+//     getRandomNumber();
+//   }
+
+//   lastNumber = randomNumber;
+//   newNumber = randomNumber;
+
+//   switch (Boolean(randomNumber)) {
+//     // Positive numbers between 140 and 180
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < 140 && randomNumber > 130
+//     ):
+//       newNumber = randomNumber + 40;
+//       lastNumber = newNumber;
+//       break;
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < 150 && randomNumber > 140
+//     ):
+//       newNumber = randomNumber + 30;
+//       lastNumber = newNumber;
+//       break;
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < 160 && randomNumber > 150
+//     ):
+//       newNumber = randomNumber + 20;
+//       lastNumber = newNumber;
+//       break;
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < 170 && randomNumber > 160
+//     ):
+//       newNumber = randomNumber + 10;
+//       lastNumber = newNumber;
+//       break;
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < 180 && randomNumber > 170
+//     ):
+//       newNumber = randomNumber;
+//       lastNumber = newNumber;
+//       break;
+//     // Negative numbers between -140 and -180
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < -140 && randomNumber > -130
+//     ):
+//       newNumber = randomNumber - 40;
+//       lastNumber = newNumber;
+//       break;
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < -150 && randomNumber > -140
+//     ):
+//       newNumber = randomNumber - 30;
+//       lastNumber = newNumber;
+//       break;
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < -160 && randomNumber > -150
+//     ):
+//       newNumber = randomNumber - 20;
+//       lastNumber = newNumber;
+//       break;
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < -160 && randomNumber > -170
+//     ):
+//       newNumber = randomNumber - 10;
+//       lastNumber = newNumber;
+//       break;
+//     case Boolean(
+//       randomNumber === lastNumber && randomNumber < -170 && randomNumber > -180
+//     ):
+//       newNumber = randomNumber;
+//       lastNumber = newNumber;
+//       break;
+//     // Number is between -140 and 140
+//     case Boolean(
+//       randomNumber != lastNumber && randomNumber < 140 && randomNumber > -140
+//     ):
+//       newNumber = randomNumber;
+//       lastNumber = newNumber;
+//   }
+
+//   numberForTest.innerText = newNumber;
+//   return newNumber;
+// };

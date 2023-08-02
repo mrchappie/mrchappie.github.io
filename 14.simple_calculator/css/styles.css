@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 30px;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  border: none;
+  outline: none;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.calculator__container {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 500px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+.calculator__container__display {
+  background-color: black;
+  text-align: end;
+  padding-right: 10px;
+}
+.calculator__container__display .operation__steps {
+  font-size: 20px;
+  padding-block: 10px;
+  opacity: 0.5;
+}
+.calculator__container__display .operation__result {
+  font-size: 50px;
+  padding-block: 15px;
+}
+.calculator__container__inputs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.calculator__container__inputs__numbers {
+  grid-column: 1/4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(135deg, hsl(0, 0%, 32%) 0%, hsl(344, 0%, 16%) 50%, hsl(0, 0%, 0%) 100%);
+}
+.calculator__container__inputs__numbers button {
+  flex: 1 0 30%;
+}
+.calculator__container__inputs__numbers button.all__clear {
+  opacity: 0.5;
+}
+.calculator__container__inputs__operations {
+  grid-column: 4/5;
+  display: flex;
+  flex-direction: column;
+}
+.calculator__container__inputs__operations button {
+  width: 100%;
+  color: black;
+}
+.calculator__container__inputs__operations button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.calculator__container__equal {
+  width: 100%;
+  grid-column: 1/5;
+}
+.calculator__container__equal button {
+  font-size: 50px;
+  width: 100%;
+  background-image: linear-gradient(35deg, hsl(16, 100%, 55%) 0%, hsl(11, 100%, 54%) 50%, hsl(0, 100%, 54%) 100%);
+}

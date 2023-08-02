@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password generator</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/951fcec9cb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="app-container">
+      <div class="resulted-password">
+        <div class="password-container">
+          <div class="password" id="password">
+            Your password will appear here
+          </div>
+          <div class="options">
+            <i class="fas fa-copy"></i>
+            <i class="fas fa-rotate"></i>
+          </div>
+        </div>
+        <div class="passwrod-stregth"></div>
+      </div>
+      <div class="password-customization">
+        <div id="title" class="title">Customize your password</div>
+        <form onsubmit="return null" class="form-container">
+          <div class="password-settings">
+            <div class="password-range">
+              <h4>Password length</h4>
+              <div class="range-input">
+                <input
+                  type="number"
+                  name="password-length"
+                  id="password-length"
+                  class="password-length"
+                  min="8"
+                  max="50"
+                  step="1"
+                  value="16"
+                />
+                <input type="range" name="range" id="range" value="16" />
+              </div>
+            </div>
+            <div class="charset-options">
+              <h4>Type of characters</h4>
+              <div class="letters-uppercase">
+                <label for="letters-uppercase"><span>A-Z</span></label>
+                <input
+                  type="checkbox"
+                  name="letters-uppercase"
+                  id="letters-uppercase"
+                  checked
+                />
+              </div>
+              <div class="letters-lowercase">
+                <label for="letters-lowercase"><span>a-z</span></label>
+                <input
+                  type="checkbox"
+                  name="letters-lowercase"
+                  id="letters-lowercase"
+                  checked
+                />
+              </div>
+              <div class="numbers">
+                <label for="numbers"><span>0-9</span></label>
+                <input type="checkbox" name="numbers" id="numbers" />
+              </div>
+              <div class="symbols">
+                <label for="symbols"><span>Symbols</span></label>
+                <input type="checkbox" name="symbols" id="symbols" checked />
+              </div>
+            </div>
+          </div>
+          <button id="generate-password-btn" type="button">Generate</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

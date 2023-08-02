@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step Progress Bar</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="steps__container" id="steps__container">
+      <div class="line" id="line">
+        <div class="inside__line" id="inside__line"></div>
+      </div>
+      <div class="steps" id="steps">
+        <div class="step" id="step">
+          <div class="circle active">&check;</div>
+          <p class="step__text opacity">Start</p>
+        </div>
+        <div class="step" id="step">
+          <div class="circle">&cross;</div>
+          <p class="step__text">Step 1</p>
+        </div>
+        <div class="step" id="step">
+          <div class="circle">&cross;</div>
+          <p class="step__text">Step 2</p>
+        </div>
+        <div class="step" id="step">
+          <div class="circle">&cross;</div>
+          <p class="step__text">Step 3</p>
+        </div>
+        <div class="step" id="step">
+          <div class="circle">&cross;</div>
+          <p class="step__text">End</p>
+        </div>
+      </div>
+    </div>
+    <div class="controls" id="controls">
+      <button class="left__arrow" id="left__arrow" disabled>&lt;</button>
+      <button class="right__arrow" id="right__arrow">&gt;</button>
+    </div>
+  </body>
+</html>

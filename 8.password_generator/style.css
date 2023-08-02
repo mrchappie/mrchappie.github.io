@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --font: 'Roboto Mono', monospace;
+  --border: rgb(66, 66, 66);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  color: white;
+
+  font-family: 'Roboto Mono', monospace;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(31, 31, 31);
+}
+/*  */
+/*  */
+/*  */
+/* RESULTED PASSWORD */
+/*  */
+/*  */
+/*  */
+.app-container .resulted-password {
+  position: relative;
+  width: 600px;
+  min-height: 100px;
+  height: auto;
+  max-height: 200px;
+  background-color: var(--black);
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 0;
+
+  overflow: hidden;
+}
+
+.app-container .resulted-password .password-container {
+  min-width: 100%;
+  height: 60px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  font-size: 30px;
+  font-family: var(--font);
+  text-indent: 5px;
+}
+
+.app-container .resulted-password .password-container .password {
+  position: absolute;
+  width: 78%;
+  height: 50px;
+  overflow: hidden;
+
+  padding-left: 10px;
+  font-size: 25px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.password {
+  overflow-y: scroll;
+}
+
+.app-container .resulted-password .password-container .options {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  width: 20%;
+  background-color: #000;
+
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-left: 1px solid var(--border);
+}
+
+.app-container .resulted-password .password-container .options i {
+  width: auto;
+  height: auto;
+  position: relative;
+  margin: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+
+  cursor: pointer;
+}
+
+.app-container .resulted-password .password-container .options i.fas:hover {
+  transform: scale(1.1);
+  color: red;
+}
+
+.app-container .resulted-password .passwrod-stregth {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background-color: greenyellow;
+}
+/*  */
+/*  */
+/*  */
+/* PASSWORD CUSTOMIZATION */
+/*  */
+/*  */
+/*  */
+.app-container .password-customization {
+  position: relative;
+  width: 600px;
+  min-height: 200px;
+  height: auto;
+  max-height: 400px;
+  background-color: var(--black);
+  padding: 10px;
+  padding-top: 0;
+  margin-top: 30px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.app-container .password-customization .title {
+  position: relative;
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.app-container .password-customization .form-container {
+  position: relative;
+  width: 100%;
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container .password-customization .form-container .password-settings {
+  position: relative;
+  width: 100%;
+  height: 80%;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.app-container
+  .password-customization
+  .form-container
+  .password-settings
+  .password-range {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container
+  .password-customization
+  .form-container
+  .password-settings
+  .password-range
+  .password-length {
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+
+  outline: none;
+  border: none;
+}
+
+.app-container
+  .password-customization
+  .form-container
+  .password-settings
+  .password-range
+  .range-input {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.app-container
+  .password-customization
+  .form-container
+  .password-settings
+  .charset-options {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding-right: 50px;
+  border-left: 1px solid var(--border);
+}
+
+.app-container
+  .password-customization
+  .form-container
+  .password-settings
+  .charset-options
+  > div {
+  width: 100%;
+  height: 25px;
+
+  margin: 2px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.app-container
+  .password-customization
+  .form-container
+  .password-settings
+  .charset-options
+  > div
+  input {
+  width: 20px;
+  height: 20px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.app-container .password-customization .form-container button {
+  position: relative;
+  width: 300px;
+  height: 20%;
+  min-height: 40px;
+  margin-bottom: 20px;
+
+  color: var(--white);
+  font-size: 20px;
+
+  background-color: transparent;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.app-container .password-customization .form-container button:hover {
+  border: 2px solid var(--white);
+}

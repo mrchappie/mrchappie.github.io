@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f59b1d;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+.app-container h1 {
+  font-family: monospace;
+  font-size: 30px;
+
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  padding: 15px;
+  margin: 20px;
+
+  border-radius: 15px;
+}
+
+.app-container button {
+  width: auto;
+  min-width: 120px;
+  height: 50px;
+
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in;
+}
+
+.app-container button:hover {
+  transform: translateY(-5px);
+  box-shadow: 3px 3px 10px #000;
+}
+
+.app-container .copy-hex {
+  padding: 10px;
+  margin: 15px;
+}
+
+.app-container .copy-hex span {
+  margin: 0 10px;
+  padding: 5px;
+
+  font-weight: bolder;
+  text-shadow: 2px 2px 5px #000;
+
+  background-color: var(--bg-color);
+  border-radius: 5px;
+}

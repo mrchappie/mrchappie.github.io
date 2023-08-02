@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --mouse-x: 50vw;
+  --mouse-y: 50vh;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+}
+
+.button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+
+  padding: 5px 10px;
+  box-shadow: 2px 2px 5px;
+
+  position: absolute;
+  top: var(--mouse-y);
+  left: var(--mouse-x);
+
+  transform: translate(-50%, -50%);
+  transition: top 0.05s ease-in-out, left 0.05s ease-in-out;
+}

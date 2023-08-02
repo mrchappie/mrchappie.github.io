@@ -1,0 +1,60 @@
+:root {
+  --black: #000;
+  --white: #fff;
+
+  --lightMode: var(var(--white));
+  --darkMode: var(var(--black));
+}
+
+img {
+  width: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.app_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app_container .toggle_mode_btn {
+  width: 60px;
+  height: 60px;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  border: none;
+  background-color: transparent;
+  background-image: url('./assests/img/lamp_open.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.app_container .toggle_mode_btn.close {
+  background-image: url('./assests/img/lamp_close_test.svg');
+}
+
+.app_container .toggle_mode_btn:hover {
+  transform: scale(0.9);
+}

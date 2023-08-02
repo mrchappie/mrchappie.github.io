@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gradient-angle: 0deg;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  min-height: 100vh;
+  padding: 80px 40px;
+
+  background-color: #222;
+}
+
+.progress__range {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.outside__circle {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #222;
+  background-image: conic-gradient(
+    orange var(--gradient-angle),
+    transparent var(--gradient-angle)
+  );
+
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  transition: all 2s ease-in-out;
+}
+
+.inside__circle {
+  width: 90%;
+  height: 90%;
+  background-color: #222;
+  color: white;
+
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+#progress {
+  font-size: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+#progress span {
+  font-size: 50px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Nav</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header id="sidebar_nav">
+      <div class="btn_container">
+        <button id="open_nav_btn">
+          <img src="./assests/img/arrow_right_circle.png" alt="" />
+        </button>
+        <button id="close_nav_btn">
+          <img src="./assests/img/left_arrow_circle.png" alt="" />
+        </button>
+      </div>
+      <div class="logo">
+        <img src="./assests/img/carrot_logo.png" alt="" />
+        <span class="notShow">Fresh Vegetables</span>
+      </div>
+      <div class="searchbar">
+        <form onsubmit="return false">
+          <input id="form_input" type="text" value="search" />
+          <button id="search_btn" type="submit">
+            <img src="./assests/img/search_white.png" alt="" />
+          </button>
+        </form>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li class="link1">
+            <a href="#"><img src="./assests/img/facebook.png" alt="" /></a
+            ><span class="notShow">Lorem, ipsum dolor.</span>
+          </li>
+          <li class="link2">
+            <a href="#"><img src="./assests/img/user.png" alt="" /></a
+            ><span class="notShow">Lorem, ipsum dolor.</span>
+          </li>
+          <li class="link3">
+            <a href="#"><img src="./assests/img/facebook.png" alt="" /></a
+            ><span class="notShow">Lorem, ipsum dolor.</span>
+          </li>
+          <li class="link4">
+            <a href="#"><img src="./assests/img/user.png" alt="" /></a
+            ><span class="notShow">Lorem, ipsum dolor.</span>
+          </li>
+          <li class="link5">
+            <a href="#"><img src="./assests/img/pin.png" alt="" /></a>
+            <span class="notShow">Lorem, ipsum dolor.</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="modal"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

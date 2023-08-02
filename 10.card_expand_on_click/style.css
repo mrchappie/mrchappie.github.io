@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+  width: 250px;
+  height: 550px;
+
+  background-image: url('https://source.unsplash.com/random/1920×1080');
+
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: center;
+
+  margin: 15px;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+
+  cursor: pointer;
+}
+
+.box:nth-child(1) {
+  height: 450px;
+}
+
+.box:nth-child(3) {
+  height: 650px;
+}
+
+.box:nth-child(5) {
+  height: 450px;
+}
+
+.box.active {
+  width: 1155.56px;
+  height: 650px;
+}

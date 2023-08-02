@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.button {
+  position: relative;
+  width: 200px;
+  height: 55px;
+  border: none;
+  border-radius: 50px;
+
+  background-color: #84c3be;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+  transition: box-shadow 0.25s ease;
+  display: grid;
+  place-items: center;
+}
+
+.button:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.button__text {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.cart {
+  display: none;
+  width: 50px;
+  position: absolute;
+
+  left: -30%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.package {
+  display: none;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-40%);
+
+  top: -100px;
+  opacity: 0;
+}
+
+/*  */
+/* Package animation */
+/*  */
+
+.package.animate__package {
+  animation: packageAnimationIn 1.5s ease-in-out 0s forwards,
+    packageAnimationOut 1.5s ease-in-out 2s forwards;
+}
+
+@keyframes packageAnimationIn {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    top: -14px;
+    opacity: 1;
+  }
+}
+
+@keyframes packageAnimationOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+}
+
+/*  */
+/* Cart animation */
+/*  */
+
+.cart.animate__cart {
+  animation: cartAnimationIn 1.5s ease-in-out 0s forwards,
+    cartAnimationOut 1.5s ease-in-out 2s forwards;
+}
+
+@keyframes cartAnimationIn {
+  0% {
+    left: -30%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes cartAnimationOut {
+  0% {
+    left: 50%;
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+}
