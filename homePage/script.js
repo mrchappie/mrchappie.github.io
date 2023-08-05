@@ -21,7 +21,7 @@ function generateCards(projectName, projectRef, projectImg) {
   codeLinkEl.textContent = 'Source Code';
   codeLinkEl.target = '_blank';
   const demoLinkEl = document.createElement('a');
-  demoLinkEl.href = `https://mrchappie.github.io/exercises/${projectRef}/index.html`;
+  demoLinkEl.href = `https://mrchappie.github.io/exercises/${projectRef}/`;
   demoLinkEl.textContent = 'Live Demo';
   demoLinkEl.target = '_blank';
 
