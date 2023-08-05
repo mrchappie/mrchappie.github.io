@@ -1,8 +1,6 @@
 import projectsData from './data.js';
 
 const containerEl = document.getElementById('app__container');
-//https://mrchappie.github.io/10.card_expand_on_click/index.html
-//https://github.com/mrchappie/mrchappie.github.io/tree/main/1.sidebar_nav
 
 function generateCards(projectName, projectRef, projectImg) {
   const divEl = document.createElement('div');
@@ -19,11 +17,11 @@ function generateCards(projectName, projectRef, projectImg) {
   headingEl.classList.add('project__name');
   headingEl.textContent = projectName;
   const codeLinkEl = document.createElement('a');
-  codeLinkEl.href = `https://github.com/mrchappie/mrchappie.github.io/tree/main/${projectRef}`;
+  codeLinkEl.href = `https://github.com/mrchappie/mrchappie.github.io/tree/main/exercises/${projectRef}`;
   codeLinkEl.textContent = 'Source Code';
   codeLinkEl.target = '_blank';
   const demoLinkEl = document.createElement('a');
-  demoLinkEl.href = `https://mrchappie.github.io/${projectRef}/index.html`;
+  demoLinkEl.href = `https://mrchappie.github.io/exercises/${projectRef}/index.html`;
   demoLinkEl.textContent = 'Live Demo';
   demoLinkEl.target = '_blank';
 
