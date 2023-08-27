@@ -5,7 +5,7 @@ const projectsData = {
     projectImg: '/exercises/assets/project1.png',
   },
   darkMode: {
-    projectName: 'Dar Mode Toggle',
+    projectName: 'Dark Mode Toggle',
     projectCodeRef: '2.dark_mode',
     projectImg: '/exercises/assets/project2.png',
   },
