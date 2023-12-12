@@ -1,15 +1,18 @@
-const logInPage = ['/3_JS/JS_homework/shift_management', 'index'];
+const logInPage = ['/exercises/16.javascrip_module_project', 'index'];
 
-const homePage = ['/3_JS/JS_homework/shift_management/pages', 'homePage'];
+const homePage = ['/exercises/16.javascrip_module_project/pages', 'homePage'];
 
-const shiftsPage = ['/3_JS/JS_homework/shift_management/pages', 'shifts'];
+const shiftsPage = ['/exercises/16.javascrip_module_project/pages', 'shifts'];
 
 const editProfilePage = [
-  '/3_JS/JS_homework/shift_management/pages',
+  '/exercises/16.javascrip_module_project/pages',
   'editProfile',
 ];
 
-const addNewShift = ['/3_JS/JS_homework/shift_management/pages', 'addNewShift'];
+const addNewShift = [
+  '/exercises/16.javascrip_module_project/pages',
+  'addNewShift',
+];
 
 export default {
   logInPage,
