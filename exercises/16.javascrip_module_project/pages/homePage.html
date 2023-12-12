@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GuardianNet</title>
+
+    <script type="module" src="../script/homePage.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Display use name in navigation -->
+    <script src="../script/navigation.js" type="module"></script>
+
+    <link rel="stylesheet" href="../css/globalStyles.css" />
+    <link rel="stylesheet" href="../css/homePage.css" />
+    <link rel="stylesheet" href="../css/navigation.css" />
+  </head>
+  <body class="app__body">
+    <div class="app__container">
+      <header class="navigation">
+        <div class="navigation__container">
+          <div class="navigation__logo">
+            <h1>GuardianNet</h1>
+          </div>
+          <nav class="navigation__links">
+            <ul>
+              <li><a href="./homePage.html" class="selected">My Shifts</a></li>
+              <li><a href="./addNewShift.html">Add Shift</a></li>
+              <li><a href="./editProfile.html">Edit Profile</a></li>
+            </ul>
+          </nav>
+
+          <div class="navigation__account">
+            <div id="navigation__account__greeting">Hello, <span></span></div>
+            <div class="navigation__account__profile">
+              <img src="https://picsum.photos/50" alt="" />
+            </div>
+            <!-- mobile navigation -->
+            <div class="mobile__menu" id="mobile__menu">
+              <img src="../assets/icons/menu.svg" alt="mobile menu icon" />
+            </div>
+            <button id="logOut">Log out</button>
+          </div>
+        </div>
+        <!-- mobile navigation -->
+        <div class="mobile__nav hide" id="mobile__nav">
+          <ul>
+            <li>
+              <a href="./homePage.html" class="selected">My Shifts</a>
+            </li>
+            <li><a href="./addNewShift.html">Add Shift</a></li>
+            <li><a href="./editProfile.html">Edit Profile</a></li>
+          </ul>
+        </div>
+      </header>
+      <main class="homepage__content">
+        <form id="search__shift" class="search__shift">
+          <div class="search__shift__heading">
+            Search Shifts by Name and Date Range
+          </div>
+          <div class="search__shift__inputs">
+            <label for="search__shift__name">
+              <div class="search__shift__name__label">Shift name</div>
+              <input
+                type="text"
+                id="search__shift__name"
+                class="search__shift__name"
+              />
+            </label>
+            <label for="search__shift__startDate">
+              <div class="search__shift__name__label">Shift start date</div>
+              <input type="date" id="search__shift__startDate" />
+            </label>
+            <label for="search__shift__endDate">
+              <div class="search__shift__name__label">Shift end date</div>
+              <input type="date" id="search__shift__endDate" />
+            </label>
+          </div>
+          <div class="search__shift__buttons">
+            <button id="search__shift__button" class="search__shift__button">
+              Search
+              <img src="../assets/icons/search.svg" alt="search icon" />
+            </button>
+            <button
+              id="clearFiltersButton"
+              class="clear__filters__button with__outline"
+              disabled
+            >
+              Clear filters
+              <img src="../assets/icons/filter.svg" alt="filter icon" />
+            </button>
+          </div>
+        </form>
+        <div class="shifts__table">
+          <div class="shifts__table__footer">
+            <ul id="bestMonth">
+              <!-- <li>Best month:</li> -->
+              <!-- <li>September, 2023</li>
+              <li>200 RON</li> -->
+            </ul>
+          </div>
+          <div class="shifts__table__wrapper">
+            <div class="shifts__table__header">
+              <ul>
+                <li>Shift name</li>
+                <li>Shift date</li>
+                <li>Start time</li>
+                <li>End time</li>
+                <li>Hourly wage</li>
+                <li>Workplace</li>
+                <li>Profit</li>
+              </ul>
+            </div>
+            <div id="shifts__table__list" class="shifts__table__list">
+              <h3 id="shifts__table__list__heading">Add your first shift.</h3>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div>
+          Copyright &copy; <span id="footerYear">2023</span> Shift Builder. All
+          Rights Reserved!
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

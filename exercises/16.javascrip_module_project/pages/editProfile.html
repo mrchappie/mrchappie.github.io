@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GuardianNet - Edit Profile</title>
+
+    <script type="module" src="../script/editProfile.js" defer></script>
+    <script type="module" src="../script/navigation.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="../css/globalStyles.css" />
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/editProfile.css" />
+  </head>
+  <body class="app__body">
+    <div class="toasts__container"></div>
+    <div class="app__container">
+      <header class="navigation">
+        <div class="navigation__container">
+          <div class="navigation__logo">
+            <h1>GuardianNet</h1>
+          </div>
+          <nav class="navigation__links">
+            <ul>
+              <li><a href="./homePage.html">My Shifts</a></li>
+              <li>
+                <a href="./addNewShift.html">Add Shift</a>
+              </li>
+              <li>
+                <a href="./editProfile.html" class="selected">Edit Profile</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="navigation__account">
+            <div id="navigation__account__greeting">Hello, <span></span></div>
+            <!-- mobile navigation -->
+            <div class="mobile__menu" id="mobile__menu">
+              <img src="../assets/icons/menu.svg" alt="mobile menu icon" />
+            </div>
+            <div class="navigation__account__profile">
+              <img src="https://picsum.photos/50" alt="" />
+            </div>
+            <button id="logOut">Log out</button>
+          </div>
+        </div>
+        <!-- mobile navigation -->
+        <div class="mobile__nav hide" id="mobile__nav">
+          <ul>
+            <li>
+              <a href="./homePage.html">My Shifts</a>
+            </li>
+            <li><a href="./addNewShift.html">Add Shift</a></li>
+            <li>
+              <a href="./editProfile.html" class="selected">Edit Profile</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main id="edit__profile" class="edit__profile">
+        <form id="edit__profile__form" class="edit__profile__form">
+          <h2 id="add__new__shift__heading">
+            Please Review and Update Your Information
+          </h2>
+          <label class="edit__profile__email" for="edit__profile__email__input">
+            <img src="../assets/icons/email.svg" alt="email icon" />
+            <input
+              type="email"
+              id="edit__profile__email__input"
+              class="edit__profile__email__input"
+              placeholder="Email"
+              data-error="email"
+            />
+          </label>
+          <label
+            class="edit__profile__firstname"
+            for="edit__profile__firstname__input"
+          >
+            <img src="../assets/icons/name.svg" alt="first name icon" />
+            <input
+              type="text"
+              id="edit__profile__firstname__input"
+              class="edit__profile__firstname__input"
+              placeholder="First name"
+              data-error="firstName"
+            />
+          </label>
+          <label
+            class="edit__profile__lastname"
+            for="edit__profile__lastname__input"
+          >
+            <img src="../assets/icons/name.svg" alt="first name icon" />
+            <input
+              type="text"
+              id="edit__profile__lastname__input"
+              class="edit__profile__lastname__input"
+              placeholder="Last name"
+              data-error="lastName"
+            />
+          </label>
+          <label
+            class="edit__profile__username"
+            for="edit__profile__username__input"
+          >
+            <img src="../assets/icons/user.svg" alt="user name icon" />
+            <input
+              type="text"
+              id="edit__profile__username__input"
+              class="edit__profile__username__input"
+              placeholder="User name"
+              disabled
+            />
+          </label>
+          <label class="edit__profile__age" for="edit__profile__age__input">
+            <img src="../assets/icons/calendar.svg" alt="calendar icon" />
+            <input
+              type="number"
+              id="edit__profile__age__input"
+              class="edit__profile__age__input"
+              placeholder="Age"
+              data-error="age"
+              min="0"
+              max="100"
+            />
+          </label>
+          <label
+            class="edit__profile__password"
+            for="edit__profile__password__input"
+          >
+            <img src="../assets/icons/password.svg" alt="password icon" />
+            <input
+              type="password"
+              id="edit__profile__password__input"
+              class="edit__profile__password__input"
+              placeholder="Password"
+              data-error="password"
+            />
+            <div id="showPassword" class="show__password">
+              <img src="../assets/icons/visibility_on.svg" alt="" />
+            </div>
+          </label>
+          <button id="edit__profile__button" class="edit__profile__button">
+            Save new information
+          </button>
+          <div class="delete__account__container">
+            <label for="delete__account__email__validation">
+              <input
+                type="email"
+                id="delete__account__email__validation"
+                placeholder="Insert email to delete account"
+                data-error="deleteAccount"
+              />
+            </label>
+            <button
+              id="delete__account__button"
+              class="delete__account__button"
+              disabled
+            >
+              Delete account
+            </button>
+          </div>
+        </form>
+      </main>
+      <footer>
+        <div>
+          Copyright &copy; <span id="footerYear">2023</span> Shift Builder. All
+          Rights Reserved!
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

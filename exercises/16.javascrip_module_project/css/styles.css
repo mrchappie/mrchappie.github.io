@@ -1,0 +1,190 @@
+.app__container, .app__container .login__signup, .app__container .login__signup .login__options,
+.app__container .login__signup .signup__options, .app__container .login__signup .login__form > label,
+.app__container .login__signup .signup__form > label, .app__container .login__signup .login__form > label .show__password,
+.app__container .login__signup .signup__form > label .show__password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app__container .login__signup .login, .app__container .login__signup .signup, .app__container .login__signup .login__form,
+.app__container .login__signup .signup__form, .app__container .login__signup .login__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app__container {
+  min-height: 100vh;
+}
+.app__container .login__signup {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+  padding: 40px 20px;
+  margin: 50px;
+  width: 600px;
+  height: 800px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.app__container .login__signup .login {
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  gap: 20px;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.app__container .login__signup .signup {
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+  gap: 20px;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.app__container .login__signup .login__heading,
+.app__container .login__signup .signup__heading {
+  font-size: 40px;
+  font-weight: 900;
+}
+.app__container .login__signup .login__options,
+.app__container .login__signup .signup__options {
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.app__container .login__signup .login__options > div > img,
+.app__container .login__signup .signup__options > div > img {
+  width: 30px;
+}
+.app__container .login__signup .login__form,
+.app__container .login__signup .signup__form {
+  row-gap: 30px;
+  min-width: 300px;
+}
+.app__container .login__signup .login__form > label,
+.app__container .login__signup .signup__form > label {
+  width: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 15px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+.app__container .login__signup .login__form > label > img,
+.app__container .login__signup .signup__form > label > img {
+  width: 20px;
+}
+.app__container .login__signup .login__form > label > input,
+.app__container .login__signup .signup__form > label > input {
+  width: 100%;
+  background-color: transparent;
+  padding-block: 10px;
+  border: none;
+  outline: none;
+}
+.app__container .login__signup .login__form > label > input.signup__form__username__input,
+.app__container .login__signup .signup__form > label > input.signup__form__username__input {
+  cursor: not-allowed;
+}
+.app__container .login__signup .login__form > label .show__password,
+.app__container .login__signup .signup__form > label .show__password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+.app__container .login__signup .login__form__button,
+.app__container .login__signup .signup__form__button {
+  font-size: 18px;
+  padding: 10px 45px;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+.app__container .login__signup .login__form__button:hover,
+.app__container .login__signup .signup__form__button:hover {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.app__container .login__signup .login__form__button:disabled,
+.app__container .login__signup .signup__form__button:disabled {
+  cursor: not-allowed;
+}
+.app__container .login__signup .login__form__button:disabled:hover,
+.app__container .login__signup .signup__form__button:disabled:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.app__container .login__signup .login__overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
+  row-gap: 50px;
+  height: 100%;
+  padding: 10px;
+  background-color: #9400ff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.app__container .login__signup .login__overlay.show__signup {
+  right: 70%;
+}
+.app__container .login__signup .login__overlay__heading {
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+}
+.app__container .login__signup .login__overlay__description {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}
+.app__container .login__signup .login__overlay__button {
+  font-size: 18px;
+  padding: 10px 45px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+  border-radius: 60px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.app__container .login__signup .login__overlay__button:hover {
+  border: 2px solid #000;
+  color: #000;
+  background-color: transparent;
+}

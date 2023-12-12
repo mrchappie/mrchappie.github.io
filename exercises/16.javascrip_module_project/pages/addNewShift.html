@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GuardianNet</title>
+
+    <script type="module" src="../script/addNewShift.js" defer></script>
+    <script type="module" src="../script/navigation.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="../css/globalStyles.css" />
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/addNewShift.css" />
+  </head>
+  <body class="app__body">
+    <div class="toasts__container"></div>
+    <div class="app__container">
+      <header class="navigation">
+        <div class="navigation__container">
+          <div class="navigation__logo">
+            <h1>GuardianNet</h1>
+          </div>
+          <nav class="navigation__links">
+            <ul>
+              <li><a href="./homePage.html">My Shifts</a></li>
+              <li>
+                <a
+                  href="./addNewShift.html"
+                  class="selected navigation__links__add__shift"
+                  >Add Shift</a
+                >
+              </li>
+              <li><a href="./editProfile.html">Edit Profile</a></li>
+            </ul>
+          </nav>
+          <div class="navigation__account">
+            <div id="navigation__account__greeting">Hello, <span></span></div>
+            <!-- mobile navigation -->
+            <div class="mobile__menu" id="mobile__menu">
+              <img src="../assets/icons/menu.svg" alt="mobile menu icon" />
+            </div>
+            <div class="navigation__account__profile">
+              <img src="https://picsum.photos/50" alt="" />
+            </div>
+            <button id="logOut">Log out</button>
+          </div>
+        </div>
+        <!-- mobile navigation -->
+        <div class="mobile__nav hide" id="mobile__nav">
+          <ul>
+            <li>
+              <a href="./homePage.html">My Shifts</a>
+            </li>
+            <li>
+              <a
+                href="./addNewShift.html"
+                class="selected navigation__links__add__shift"
+                >Add Shift</a
+              >
+            </li>
+            <li><a href="./editProfile.html">Edit Profile</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="add__new__shift" class="add__new__shift">
+        <form id="new__shift__form" class="new__shift__form">
+          <h1 id="add__new__shift__heading">Create New Shift</h1>
+          <label for="new__shift__name"
+            ><input type="text" id="new__shift__name" placeholder="Shift name"
+          /></label>
+          <label for="new__shift__date" class="new__shift__date__label"
+            ><input type="date" id="new__shift__date"
+          /></label>
+
+          <label
+            for="new__shift__starttime"
+            class="new__shift__starttime__label"
+          >
+            <input type="time" id="new__shift__starttime" placeholder="--:--" />
+          </label>
+          <label for="new__shift__endtime" class="new__shift__endtime__label"
+            ><input type="time" id="new__shift__endtime" placeholder="--:--"
+          /></label>
+          <label for="new__shift__hourly__wage"
+            ><input
+              type="number"
+              id="new__shift__hourly__wage"
+              placeholder="Hourly wage"
+              min="0"
+          /></label>
+          <label for="new__shift__workplace"
+            ><input
+              type="text"
+              id="new__shift__workplace"
+              placeholder="Workplace"
+          /></label>
+          <label for="new__shift__profit"
+            ><input
+              type="text"
+              id="new__shift__profit"
+              placeholder="Shift profit"
+              disabled
+          /></label>
+
+          <button id="new__shift__button">Add shift</button>
+        </form>
+      </main>
+      <footer>
+        <div>
+          Copyright &copy; <span id="footerYear">2023</span> Shift Builder. All
+          Rights Reserved!
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

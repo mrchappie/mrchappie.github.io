@@ -74,6 +74,11 @@ const projectsData = {
     projectCodeRef: '15.step_progress_bar',
     projectImg: '/exercises/assets/project15.png',
   },
+  javascriptEndModuleProject: {
+    projectName: 'Javascript Module Project',
+    projectCodeRef: '16.javascrip_module_project',
+    projectImg: '/exercises/assets/project16.png',
+  },
 };
 
 export default projectsData;

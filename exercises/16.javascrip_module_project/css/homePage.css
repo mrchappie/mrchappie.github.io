@@ -1,0 +1,227 @@
+.app__body .homepage__content .search__shift__inputs, .app__body .homepage__content .search__shift__buttons, .app__body .homepage__content .search__shift__buttons .search__shift__button,
+.app__body .homepage__content .search__shift__buttons .clear__filters__button, .app__body .homepage__content .shifts__table__header ul, .app__body .homepage__content .shifts__table__header ul li, .app__body .homepage__content .shifts__table__list ul, .app__body .homepage__content .shifts__table__list ul li, .app__body .homepage__content .shifts__table__footer, .app__body .homepage__content .shifts__table__footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app__body .app__container, .app__body .homepage__content .search__shift, .app__body .homepage__content .shifts__table__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app__body .app__container {
+  min-height: 100vh;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 100px;
+}
+.app__body header {
+  width: 100%;
+}
+.app__body .homepage__content {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 0 70%;
+          flex: 2 0 70%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-block: 20px;
+}
+.app__body .homepage__content .search__shift {
+  position: relative;
+  gap: 10px;
+  background-color: #e4f1ff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+}
+.app__body .homepage__content .search__shift__heading {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.app__body .homepage__content .search__shift__inputs {
+  gap: 20px;
+}
+.app__body .homepage__content .search__shift__inputs > label {
+  position: relative;
+  width: 200px;
+}
+.app__body .homepage__content .search__shift__inputs > label > div {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 4px;
+  left: 10px;
+  bottom: 80%;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.app__body .homepage__content .search__shift__inputs > label > input {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+}
+.app__body .homepage__content .search__shift__inputs > label > input::-webkit-input-placeholder {
+  color: #000;
+  font-weight: 500;
+}
+.app__body .homepage__content .search__shift__inputs > label > input::-moz-placeholder {
+  color: #000;
+  font-weight: 500;
+}
+.app__body .homepage__content .search__shift__inputs > label > input:-ms-input-placeholder {
+  color: #000;
+  font-weight: 500;
+}
+.app__body .homepage__content .search__shift__inputs > label > input::-ms-input-placeholder {
+  color: #000;
+  font-weight: 500;
+}
+.app__body .homepage__content .search__shift__inputs > label > input::placeholder {
+  color: #000;
+  font-weight: 500;
+}
+.app__body .homepage__content .search__shift__buttons {
+  gap: 20px;
+}
+.app__body .homepage__content .search__shift__buttons .search__shift__button,
+.app__body .homepage__content .search__shift__buttons .clear__filters__button {
+  gap: 10px;
+}
+.app__body .homepage__content .search__shift__buttons .search__shift__button img,
+.app__body .homepage__content .search__shift__buttons .clear__filters__button img {
+  width: 20px;
+}
+.app__body .homepage__content .search__shift__buttons .clear__filters__button:disabled {
+  opacity: 0.4;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.app__body .homepage__content .shifts__table {
+  margin-block: 20px;
+  padding: 40px;
+  background-color: #e4f1ff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.app__body .homepage__content .shifts__table__header ul {
+  gap: 10px;
+}
+.app__body .homepage__content .shifts__table__header ul li {
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #aed2ff;
+}
+.app__body .homepage__content .shifts__table__list {
+  margin-block: 20px;
+}
+.app__body .homepage__content .shifts__table__list ul {
+  padding-block: 5px;
+  gap: 10px;
+}
+.app__body .homepage__content .shifts__table__list ul:hover li {
+  border-color: #9400ff;
+}
+.app__body .homepage__content .shifts__table__list ul li {
+  width: 150px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.app__body .homepage__content .shifts__table__list ul li:first-child {
+  font-weight: 600;
+}
+.app__body .homepage__content .shifts__table__footer {
+  margin-bottom: 40px;
+}
+.app__body .homepage__content .shifts__table__footer ul {
+  min-width: 300px;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: #aed2ff;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.app__body .homepage__content .shifts__table__footer ul li {
+  text-align: center;
+  color: #000;
+}
+
+@media (width < 1200px) {
+  .app__body .homepage__content {
+    padding: 20px;
+  }
+  .app__body .homepage__content .shifts__table {
+    width: 90vw;
+  }
+  .app__body .homepage__content .shifts__table__wrapper {
+    overflow-x: auto;
+    padding-inline: 5px;
+  }
+  .app__body .homepage__content .shifts__table__header, .app__body .homepage__content .shifts__table__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+@media (width < 768px) {
+  .app__body .homepage__content .search__shift__inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (width < 500px) {
+  .app__body .homepage__content .search__shift__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}

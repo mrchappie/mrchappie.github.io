@@ -1,0 +1,55 @@
+.homepage__modals__add__shift, .homepage__modals__edit__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homepage__modals__add__shift form, .homepage__modals__edit__profile form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homepage__modals {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+.homepage__modals__add__shift, .homepage__modals__edit__profile {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 100%;
+  display: none;
+}
+.homepage__modals__add__shift form, .homepage__modals__edit__profile form {
+  position: absolute;
+  gap: 20px;
+  background-color: white;
+  padding: 60px;
+}
+.homepage__modals__add__shift form input, .homepage__modals__edit__profile form input {
+  width: 300px;
+  height: 40px;
+}
+.homepage__modals__add__shift form > button, .homepage__modals__edit__profile form > button {
+  padding: 10px 40px;
+}

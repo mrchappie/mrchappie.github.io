@@ -1,0 +1,95 @@
+@use './utils/globalClasses' as *;
+@use './utils/colors' as *;
+
+.app__body {
+  .app__container {
+    min-height: 100vh;
+    @extend %flex-column;
+
+    header {
+      width: 100%;
+    }
+
+    .add__new__shift {
+      position: relative;
+      @extend %flex-row;
+      max-width: 1200px;
+      margin: auto;
+      margin-top: 120px;
+
+      form {
+        position: relative;
+        @extend %flex-column;
+        gap: 20px;
+        background-color: $light-base-color;
+        box-shadow: 0px 0px 10px rgba($black, $alpha: 0.3);
+        border-radius: 20px;
+
+        padding: 60px;
+
+        h1 {
+          font-size: 25px;
+          font-weight: 900;
+        }
+
+        label {
+          width: 100%;
+          position: relative;
+          background-color: rgba($black, $alpha: 0.1);
+          @extend %flex-row;
+          padding: 5px 15px;
+          column-gap: 10px;
+          border-radius: 5px;
+          border: 2px solid transparent;
+
+          input {
+            width: 300px;
+            background-color: transparent;
+            padding-block: 10px;
+            border: none;
+            outline: none;
+
+            &::placeholder {
+              color: $black;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .new__shift__date__label::before,
+        .new__shift__starttime__label::before,
+        .new__shift__endtime__label::before {
+          content: '';
+          z-index: 100;
+          position: absolute;
+          top: -15px;
+          left: 10px;
+
+          background-color: rgba($black, $alpha: 0.7);
+          color: $white;
+          padding: 2px 4px;
+
+          border-radius: 5px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .new__shift__date__label::before {
+          content: 'Shift date';
+        }
+
+        .new__shift__starttime__label::before {
+          content: 'Shift start time';
+        }
+
+        .new__shift__endtime__label::before {
+          content: 'Shift end time';
+        }
+
+        > button {
+          padding: 10px 40px;
+        }
+      }
+    }
+  }
+}

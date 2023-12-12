@@ -1,0 +1,185 @@
+@use './utils/globalClasses' as *;
+@use './utils/colors' as *;
+
+.navigation {
+  box-shadow: 0 0 10px rgba($black, $alpha: 0.4);
+  background-color: $light-base-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &__container {
+    background-color: $light-base-color;
+    padding-block: 10px;
+    position: relative;
+    @extend %flex-row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    z-index: 5;
+
+    .navigation__logo {
+      flex: 1 0 50px;
+      color: $dark-base-color;
+      font-size: 18px;
+    }
+
+    .navigation__links {
+      flex: 2 0 50px;
+      ul {
+        @extend %flex-row;
+        gap: 10px;
+
+        a {
+          display: inline-block;
+          background-color: $mild-base-color;
+          padding: 10px 20px;
+          text-decoration: none;
+          color: $black;
+          font-size: 16px;
+          font-weight: 600;
+          border-radius: 10px;
+          transition: all 0.25s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: 0 0 5px rgba($black, $alpha: 0.4);
+          }
+
+          &.selected {
+            background-color: transparent;
+            border: 2px solid $mild-base-color;
+          }
+        }
+      }
+    }
+
+    .navigation__account {
+      flex: 1 0 50px;
+      @extend %flex-row;
+      justify-content: flex-end;
+      gap: 10px;
+
+      .mobile__menu {
+        cursor: pointer;
+      }
+
+      #navigation__account__greeting {
+        font-style: italic;
+        > span {
+          font-weight: 900;
+          font-style: normal;
+          color: $dark-base-color;
+        }
+      }
+
+      &__profile {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid $dark-base-color;
+      }
+    }
+  }
+
+  .mobile__nav {
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding-block: 40px;
+
+    background-color: $light-base-color;
+    box-shadow: 0 0 5px rgba($black, $alpha: 0.4);
+
+    transition: all 1s ease-in-out;
+
+    &.hide {
+      transform: translateY(-280px);
+    }
+
+    ul {
+      @extend %flex-column;
+      gap: 10px;
+
+      a {
+        display: inline-block;
+        background-color: $mild-base-color;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: $black;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: all 0.25s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0 5px rgba($black, $alpha: 0.4);
+        }
+
+        &.selected {
+          background-color: transparent;
+          border: 2px solid $mild-base-color;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 1200px) {
+  .navigation {
+    &__container {
+      padding-inline: 40px;
+      justify-content: space-evenly;
+      .navigation__logo {
+        display: none;
+      }
+
+      .navigation__account {
+        #navigation__account__greeting {
+          display: none;
+        }
+        &__profile {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 769px) {
+  .navigation {
+    &__container {
+      .navigation__links {
+        display: none;
+      }
+
+      .mobile__nav {
+        flex-direction: column;
+      }
+
+      .navigation__account {
+        justify-content: space-between;
+        #navigation__account__greeting {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (width > 768px) {
+  .navigation {
+    &__container {
+      .navigation__account {
+        .mobile__menu {
+          display: none;
+        }
+      }
+    }
+  }
+}

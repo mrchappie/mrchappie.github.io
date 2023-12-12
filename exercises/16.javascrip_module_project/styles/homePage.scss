@@ -1,0 +1,225 @@
+@use './utils/globalClasses' as *;
+@use './utils/colors' as *;
+
+.app__body {
+  .app__container {
+    @extend %flex-column;
+    min-height: 100vh;
+    align-items: flex-start;
+    margin-top: 100px;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .homepage__content {
+    flex: 2 0 70%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-block: 20px;
+
+    .search__shift {
+      position: relative;
+      @extend %flex-column;
+      gap: 10px;
+
+      background-color: $light-base-color;
+      box-shadow: 0 0 10px rgba($black, $alpha: 0.2);
+      padding: 20px;
+      border-radius: 20px;
+
+      &__heading {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+
+      &__inputs {
+        @extend %flex-row;
+        gap: 20px;
+
+        > label {
+          position: relative;
+          width: 200px;
+
+          > div {
+            position: absolute;
+            background-color: rgba($black, $alpha: 0.7);
+            color: $white;
+            padding: 4px;
+            left: 10px;
+            bottom: 80%;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+          }
+
+          > input {
+            width: 100%;
+            background-color: rgba($black, $alpha: 0.1);
+            padding: 10px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            color: $black;
+            font-weight: 500;
+            font-size: 14px;
+
+            &::placeholder {
+              color: $black;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      &__buttons {
+        @extend %flex-row;
+        gap: 20px;
+
+        .search__shift__button,
+        .clear__filters__button {
+          @extend %flex-row;
+          gap: 10px;
+
+          img {
+            width: 20px;
+          }
+        }
+
+        .clear__filters__button:disabled {
+          // color: rgba($black, $alpha: 0.2);
+          // border-color: rgba($black, $alpha: 0.2);
+          opacity: 0.4;
+          filter: grayscale(1);
+        }
+      }
+    }
+
+    .shifts__table {
+      margin-block: 20px;
+      padding: 40px;
+
+      background-color: $light-base-color;
+      box-shadow: 0 0 10px rgba($black, $alpha: 0.2);
+      border-radius: 20px;
+
+      &__header {
+        ul {
+          @extend %flex-row;
+          gap: 10px;
+
+          li {
+            @extend %flex-row;
+            width: 150px;
+            height: 40px;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: $mild-base-color;
+          }
+        }
+      }
+
+      &__list {
+        @extend %flex-column;
+        margin-block: 20px;
+
+        ul {
+          @extend %flex-row;
+          padding-block: 5px;
+          gap: 10px;
+
+          &:hover li {
+            border-color: $base-color;
+          }
+
+          li {
+            @extend %flex-row;
+            width: 150px;
+            height: 50px;
+
+            // background-color: $light-base-color;
+            background-color: rgba($white, $alpha: 0.8);
+            box-shadow: 0 0 3px rgba($black, $alpha: 0.3);
+            border-radius: 5px;
+            border: 2px solid transparent;
+            font-size: 16px;
+            font-weight: 400;
+            transition: all 0.15s ease-in-out;
+
+            &:first-child {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      &__footer {
+        @extend %flex-row;
+        margin-bottom: 40px;
+        ul {
+          min-width: 300px;
+          @extend %flex-row;
+          gap: 20px;
+          padding: 10px 20px;
+
+          background-color: $mild-base-color;
+
+          font-weight: 600;
+          border-radius: 10px;
+          li {
+            text-align: center;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width < 1200px) {
+  .app__body {
+    .homepage__content {
+      padding: 20px;
+      .shifts__table {
+        width: 90vw;
+        &__wrapper {
+          overflow-x: auto;
+          padding-inline: 5px;
+        }
+        &__header,
+        &__list {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 768px) {
+  .app__body {
+    .homepage__content {
+      .search__shift {
+        &__inputs {
+          flex-direction: column;
+          gap: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 500px) {
+  .app__body {
+    .homepage__content {
+      .search__shift {
+        &__buttons {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
