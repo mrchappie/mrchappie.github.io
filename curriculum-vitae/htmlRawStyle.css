@@ -1,0 +1,52 @@
+.html-raw-tag {
+  opacity: 0.3;
+  font-weight: 400;
+  user-select: none;
+}
+
+.body-tag {
+  position: absolute;
+  left: 40px;
+}
+
+.body-tag:first-child {
+  top: 10px;
+}
+
+.aside-tag {
+  position: absolute;
+  left: 0px;
+  top: -15px;
+}
+
+.article-tag {
+  position: absolute;
+  left: 0px;
+  top: -15px;
+}
+
+.header-tag {
+  position: absolute;
+  left: 0px;
+  top: -5px;
+}
+
+.html-raw-heading-color {
+  color: #fee997;
+}
+
+.html-raw-job-color {
+  color: #fee997;
+}
+
+.html-raw-section-color {
+  color: #f38191;
+}
+
+.html-raw-company-color {
+  color: #9b6369;
+}
+
+.html-raw-bold-color {
+  color: #5ce0ed;
+}

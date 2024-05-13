@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: monospace;
+  color: white;
+  text-align: start;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  margin-block: 10px;
+}
+
+.divider-dotted {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.section-heading {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.tags-container {
+  gap: 5px;
+}
+
+.skill-tag {
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.icons {
+  width: 20px;
+  margin-inline: 4px;
+}
+
+.info {
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: start;
+}
+
+.info-tag {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  min-width: fit-content;
+}
+
+body {
+  margin: auto;
+  background-color: #121212;
+  position: relative;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-template-rows: repeat(10, 1fr); */
+  width: 210mm;
+  /* height: 297mm; */
+  background: #222;
+  padding-inline: 32px;
+  padding-block: 40px;
+  padding-left: 40px;
+  gap: 20px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  grid-row: span 2;
+  grid-column: span 12;
+  gap: 20px;
+  margin-bottom: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+
+aside {
+  height: 100%;
+  grid-row: span 10;
+  grid-column: span 4;
+  position: relative;
+}
+
+article {
+  height: 100%;
+  grid-row: span 10;
+  grid-column: span 8;
+  position: relative;
+}
+
+/* ASIDE */
+
+.aside-skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.aside-skills-section > ul {
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.aside-skills-section > ul > li {
+  list-style: none;
+}
+
+.project {
+  margin-block: 10px;
+}
+
+.project p {
+  justify-content: space-between;
+  padding-block: 10px;
+}
+
+.project-desc {
+  margin-left: 30px;
+  gap: 15px;
+}
+
+/* HEADER */
+.profile-image {
+  grid-column: span 4;
+  gap: 5px;
+}
+
+.image-container {
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid red;
+}
+
+.image-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header-info {
+  grid-column: span 8;
+}
+
+.header-info h1 {
+  font-size: 24px;
+}
+
+.profession {
+  font-weight: bolder;
+}
+
+/* MAIN CONTENT */
+.description {
+  margin-block: 10px;
+}
+
+.job {
+  margin-block: 10px;
+}
+
+.job p {
+  justify-content: space-between;
+  padding-block: 10px;
+}
+
+.job-desc {
+  margin-left: 30px;
+  gap: 5px;
+}
+
+.edu {
+  margin-block: 10px;
+}
+
+.edu p {
+  justify-content: space-between;
+  padding-block: 10px;
+}
+
+.edu-desc {
+  margin-left: 30px;
+  gap: 15px;
+}
+
+.cert {
+  margin-block: 10px;
+}
+
+.cert p {
+  justify-content: space-between;
+  padding-block: 10px;
+}
+
+.cert-desc {
+  margin-left: 30px;
+  gap: 15px;
+}
+
+/* ROW NUMBER */
+.row-numbers {
+  width: 20px;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px;
+}
+
+.row-numbers span {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  main {
+    gap: 50px;
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    grid-column: span 1;
+
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    height: 100%;
+    grid-row: span 5;
+    grid-column: span 1;
+    position: relative;
+  }
+
+  article {
+    height: 100%;
+    grid-row: span 5;
+    grid-column: span 1;
+    position: relative;
+  }
+
+  /* HEADER */
+  .profile-image {
+    grid-column: span 1;
+  }
+
+  .header-info {
+    grid-column: span 1;
+  }
+}
