@@ -65,6 +65,13 @@
   min-width: fit-content;
 }
 
+a {
+  all: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+}
+
 body {
   margin: auto;
   background-color: #121212;
